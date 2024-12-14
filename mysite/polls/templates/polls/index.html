@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+投票アプリ | 投票一覧
+{% endblock %}
+
+<link rel="stylesheet" href="{% static 'polls/style.css' %}">
+
+{% block contents %}
+<div class="container">
+    <div class="my-div-style col-12 col-md-8 mx-auto"> <!-- 幅を少し広くして中央寄せ -->
+        <h1 class="text-center">投票一覧</h1> <!-- タイトルを中央寄せ -->
+        {% if latest_question_list %}
+            <ul class="question-list">
+            {% for question in latest_question_list %}
+                <li class="question-item">
+                    <a href="{% url 'polls:detail' question.id %}" class="question-link">{{ question.question_text }}</a>
+                </li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>投票がありません。</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

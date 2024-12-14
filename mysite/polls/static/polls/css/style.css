@@ -1,0 +1,125 @@
+/* 全体の基本スタイル */
+body {
+    font-family: 'Helvetica', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* コンテナを中央寄せにするためのスタイル */
+.my-div-style {
+    padding: 20px;
+    text-align: center; /* 中央寄せ */
+}
+
+.question-list {
+    list-style-type: none;  /* デフォルトのリストマーカーを削除 */
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.question-item {
+    margin-bottom: 15px;
+}
+
+.question-link {
+    font-size: 4.0rem; /* フォントサイズを大きく */
+    color: #007bff; /* 青色リンク */
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f8f9fa; /* 背景色を設定 */
+    border-radius: 5px; /* 角を丸く */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.question-link:hover {
+    background-color: #007bff; /* ホバー時に背景色変更 */
+    color: #fff; /* ホバー時に文字色変更 */
+}
+
+
+
+
+
+
+/* 投票詳細ページ */
+fieldset {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 6px;
+}
+
+legend {
+    font-size: 22px;
+    color: #333;
+    font-weight: bold;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+input[type="submit"] {
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* 結果ページ */
+.results-item {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #dee2e6;
+}
+
+.choice-text {
+    font-size: 18px;
+    color: #495057;
+    font-weight: bold;
+}
+
+.vote-count {
+    font-size: 18px;
+    color: #6c757d;
+}
+
+/* ボタン */
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.back-button:hover {
+    color: #0056b3;
+}

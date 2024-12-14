@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}投票アプリ | 結果表示{% endblock %}
+
+<link rel="stylesheet" href="{% static 'polls/style.css' %}">
+
+{% block contents %}
+<div class="container">
+    <div class="my-div-style col-12 col-md-8 mx-auto"> <!-- 幅を少し広くして中央寄せ -->
+        <h1 class="text-center">結果表示</h1>
+        <h2>{{ question.question_text }}</h2>
+        <ul>
+            {% for choice in question.choice_set.all %}
+                <li class="results-item">
+                    <span class="choice-text">{{ choice.choice_text }}</span>
+                    <span class="vote-count">{{ choice.votes }}票</span>
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'polls:detail' question.id %}" class="back-button">もう一度投票する</a>
+    </div>
+</div>
+{% endblock %}
